@@ -1,8 +1,5 @@
-import TextGeneratorBefore from "./before/TextGenerator";
 import ProfileFormBefore from "./before/ProfileForm";
-// import TextGeneratorAfter from "./after/TextGenerator";
-// import ProfileFormAfter from "./after/ProfileForm";
-// import UserProfileAfter from "./after/UserProfile";
+import TextGenerator from "./before/TextGenerator";
 
 function App() {
   return (
@@ -12,7 +9,7 @@ function App() {
         <p>
           <strong>💡 목표:</strong> MCP(Model Context Protocol)를 활용하여
           <br />
-          문서 학습 → 계획 수립 → 테스트 작성 → 코드 리팩터링 → 검증 → PR 생성
+          문서 학습 → 계획 수립 → Issue 생성 → 코드 리팩터링 → 검증 → PR 생성
           <br />
           전체 워크플로를 자동화합니다.
         </p>
@@ -22,8 +19,8 @@ function App() {
         <p>
           <strong>📝 실습 프롬프트:</strong>
           <br />
-          "c7을 이용해서 google/genai 라이브러리를 학습하고 텍스트 생성을 생성형
-          AI를 사용하도록 변경해줘"
+          "context7을 이용해서 @google/genai 라이브러리를 학습하고 텍스트 생성을
+          생성형 AI를 사용하도록 변경해줘"
         </p>
         <p style={{ marginTop: "0.5rem", fontSize: "0.9em" }}>
           ✅ Context7이 google/genai 최신 문서를 학습합니다
@@ -32,16 +29,15 @@ function App() {
           <br />✅ 최신 라이브러리 API 사용법이 자동 반영됩니다
         </p>
       </div>
-      <TextGeneratorBefore />
+      <TextGenerator />
       <hr />
       <h2>🧨 심화 실습: React 19 마이그레이션 워크플로</h2>
       <div className="info-box">
         <p>
           <strong>Phase 1:</strong> React 19 문서 학습 →{" "}
-          <strong>Phase 2:</strong> 계획 수립 & 이슈 생성 →<br />
-          <strong>Phase 3:</strong> 테스트 작성 → <strong>Phase 4:</strong> 코드
-          리팩터링 → <strong>Phase 5:</strong> 검증 → <strong>Phase 6:</strong>{" "}
-          PR 생성
+          <strong>Phase 2:</strong> 계획 수립 & 이슈 생성 →{" "}
+          <strong>Phase 3:</strong> 코드 리팩터링 → <strong>Phase 4:</strong>{" "}
+          검증 → <strong>Phase 5:</strong> PR 생성
         </p>
       </div>
       <h3>실습 대상: 폼(Form) 로직 리팩터링</h3>
@@ -65,22 +61,6 @@ function App() {
           <h3>
             After <span className="badge v19">useActionState</span>
           </h3>
-          <p style={{ color: "#fbbf24", padding: "1rem" }}>
-            <strong>📝 실습 순서:</strong>
-            <br />
-            1. React 19 문서 학습
-            <br />
-            2. 리팩터링 계획 & 이슈 생성
-            <br />
-            3. PlayWright 테스트 작성
-            <br />
-            4. 코드 리팩터링
-            <br />
-            5. 테스트 실행 & 검증
-            <br />
-            6. PR 생성
-          </p>
-          {/* <ProfileFormAfter /> */}
           <div
             className="info-box"
             style={{ marginTop: "1rem", fontSize: "0.9em" }}
@@ -99,7 +79,7 @@ function App() {
           전체 MCP 워크플로를 체험해보세요!
         </p>
         <p style={{ marginTop: "0.5rem" }}>
-          자세한 프롬프트는 <code>PROMPTS_CHEATSHEET.md</code>를 참조하세요.
+          자세한 내용은 <code>README.md</code>를 참조하세요.
         </p>
       </div>
     </div>

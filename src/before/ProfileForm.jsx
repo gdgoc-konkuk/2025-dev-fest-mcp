@@ -19,6 +19,7 @@ export default function ProfileForm() {
       setName(""); // 성공 시 초기화
     } catch (err) {
       setError(err.message); // 5. 수동으로 에러 상태 설정
+      setSubmittedName("");
     } finally {
       setIsPending(false); // 6. 수동으로 로딩 상태 해제
     }
@@ -49,7 +50,7 @@ export default function ProfileForm() {
           {error}
         </p>
       )}
-      {submittedName && (
+      {!error && submittedName && (
         <p
           className="success"
           data-testid="profile-success-message"
